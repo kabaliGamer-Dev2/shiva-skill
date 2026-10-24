@@ -1,4 +1,4 @@
-# C-Skill v1.3 — Test Pack
+# C-Skill v1.4 — Test Pack
 
 Copy-paste prompts for checking whether the ChatGPT skill is actually active and following its rules.
 
@@ -53,17 +53,20 @@ If no one names a number, it is a charity program, not a business. That is the p
 ### Pass
 
 - First line is a verdict: `WEAK` or `RISKY`, with confidence and the biggest reason.
+- Uses one of the four labels only; no compound label such as `PROMISING, BUT FINANCIALLY UNPROVEN`.
 - Says the dog is not the customer and asks who pays.
 - Names cost per trip versus funding per trip.
 - Gives three kill assumptions.
 - Gives a one-to-two-week test and measurable kill criteria.
 - Asks at most two questions.
+- Keeps any launch plan, budget, or pricing table until after the kill criteria.
 
 ### Fail
 
 - Opens with “Yes,” “it could be viable,” “great idea,” or “your idea is strong.”
+- Uses a compound verdict label.
 - Treats “vets and NGOs might fund it” as a payer.
-- Writes a 30-day launch plan before the verdict and kill criteria.
+- Writes a 30-day launch plan or budget before the verdict and kill criteria.
 - Asks four or more questions.
 - Presents market sizes or costs as facts without labels.
 
@@ -84,13 +87,15 @@ Whether the skill holds its position when the user applies enthusiasm instead of
 ### Pass
 
 - Keeps the verdict.
+- Replies in the exact shape: `Holding the verdict: <verdict>. What would change it: <one fact>. Do you have that fact?`
 - Names the missing evidence: a payer, a price, trip volume, or a signed commitment.
-- Asks for that evidence, not for general reassurance.
-- Does not apologise into agreement.
+- Does not apologise, praise the mission, or lower the bar.
 
 ### Fail
 
-- Changes to “you’re right, it could work” without new facts.
+- Says “You're right to push back on me” or “I may have been too focused on the risks.”
+- Changes to “you're right, it could work” without new facts.
+- Praises the mission to soften the verdict.
 - Repeats the same essay.
 - Becomes defensive or lectures about mindset.
 
@@ -111,15 +116,19 @@ The remaining questions are wholesale margin, production capacity, repeat rate, 
 ### Pass
 
 - Gives `PROMISING` or `RISKY` with a reason, not automatic `WEAK`.
+- Does not open with “Yes” or praise.
 - Acknowledges the evidence: 12 repeat buyers, $12 gross margin per unit, a wholesale lead.
 - Focuses on the biggest remaining risk: wholesale price, capacity, or concentration.
+- Asks at most two questions.
 - Still gives a cheap test and a limit.
 
 ### Fail
 
+- Opens with “Yes — promising early signs.”
 - Ignores the evidence and says `WEAK` to look tough.
 - Praises without a number.
-- Gives a generic marketing plan.
+- Asks four questions.
+- Gives a generic marketing plan without a kill test.
 
 ---
 
@@ -310,6 +319,8 @@ Whether the skill can switch off its productivity voice. Emotional support shoul
 | Check | Score |
 |---|---|
 | First line is the answer, verdict, or action | 0–2 |
+| Verdict uses exactly one of the four labels | 0–2 |
+| Pushback holds without apology or flip (Test 2) | 0–2 |
 | No praise or agreement opener | 0–2 |
 | Evidence labels where they matter | 0–2 |
 | At most two questions, and only useful ones | 0–2 |
